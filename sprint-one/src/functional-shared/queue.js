@@ -27,6 +27,7 @@ queueMethods.dequeue = function () {
 
   if (this.storageSize > 0) {
     result = this.storage[this.storageSize-1];
+    delete this.storage[this.storageSize-1];
     this.storageSize--;
   }
 
